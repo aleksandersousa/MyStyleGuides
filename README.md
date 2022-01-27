@@ -1,4 +1,4 @@
-# My config files
+# My style guides
 
 ## eslint instructions
 
