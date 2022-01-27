@@ -7,3 +7,5 @@
 3. yarn run eslint --init
 
 [eslint file](./.eslintrc.js)
+
+[editorConfig file](./.editorconfig)
