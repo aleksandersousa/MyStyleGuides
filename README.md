@@ -10,3 +10,5 @@
 [eslint file](./.eslintrc.js)
 
 [editorConfig file](./.editorconfig)
+
+[vscode settings](./vscode-settings.json)
