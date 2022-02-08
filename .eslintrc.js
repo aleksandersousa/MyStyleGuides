@@ -2,10 +2,12 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'plugin:prettier/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -14,16 +16,17 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'unused-imports',
-  ],
+  plugins: ['react', 'unused-imports'],
   rules: {
     'react/jsx-filename-extension': [
       'error',
       {
         extensions: ['.js', '.jsx'],
       },
+    ],
+    'prettier/prettier': [
+      'error',
+      { singleQuote: true, arrowParens: 'avoid', printWidth: 80 },
     ],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
@@ -43,7 +46,10 @@ module.exports = {
     'unused-imports/no-unused-vars': [
       'warn',
       {
-        vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_',
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
       },
     ],
   },

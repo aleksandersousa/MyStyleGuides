@@ -64,8 +64,7 @@
   "editor.unicodeHighlight.allowedCharacters": {
       "’": true
   },
+  "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
-  "prettier.eslintIntegration": true,
-  "prettier.arrowParens": "avoid",
-  "prettier.printWidth": 80
+  "eslint.alwaysShowStatus": true
 }
