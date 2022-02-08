@@ -5,7 +5,7 @@
 1. add eslint extension to vscode
 2. yarn add eslint -D
 3. yarn run eslint --init
-4. yarn add eslint-plugin-unused-imports
+4. yarn add eslint-plugin-unused-imports -D
 
 [eslint file](./.eslintrc.js)
 
