@@ -29,6 +29,7 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react/no-unstable-nested-components': 'off',
     'react/no-unescaped-entities': 'off',
+    'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'jsx-a11y/media-has-caption': 'off',
