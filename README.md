@@ -17,3 +17,5 @@
 [editorConfig file](./.editorconfig)
 
 [vscode settings](./vscode-settings.json)
+
+[prettier file](./.prettier.config.js)
