@@ -6,9 +6,9 @@ module.exports = {
   },
   extends: [
     'airbnb',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -17,6 +17,7 @@ module.exports = {
     },
     ecmaVersion: 'latest',
     sourceType: 'module',
+    project: ['./tsconfig.json'],
   },
   plugins: ['react', 'react-hooks', '@typescript-eslint', 'unused-imports', 'prettier'],
   rules: {
@@ -38,9 +39,11 @@ module.exports = {
         'tsx': 'never'
       }
     ],
+    '@typescript-eslint/explicit-function-return-type': 'error',
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'react/function-component-definition': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/no-unstable-nested-components': 'off',
     'react/no-unescaped-entities': 'off',
