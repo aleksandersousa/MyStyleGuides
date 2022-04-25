@@ -10,7 +10,7 @@
 ## prettier instructions
 
 1. add prettier extension to vscode
-2. yarn add eslint-config-prettier eslint-plugin-prettier prettier --dev
+2. yarn add prettier eslint-plugin-prettier eslint-config-prettier -D
 
 [eslint file](./.eslintrc.js)
 

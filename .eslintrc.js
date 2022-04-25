@@ -4,7 +4,13 @@ module.exports = {
     es2021: true,
     jest: true,
   },
-  extends: ['plugin:react/recommended', 'airbnb', 'plugin:prettier/recommended'],
+  extends: [
+    'airbnb',
+    'plugin:react/recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -12,35 +18,56 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'unused-imports'],
+  plugins: ['react', 'react-hooks', '@typescript-eslint', 'unused-imports', 'prettier'],
   rules: {
-    'react/jsx-filename-extension': [
-      'error',
+    'react/jsx-filename-extension':[
+      'warn',
       {
-        extensions: ['.js', '.jsx'],
-      },
+         'extensions':[
+            '.tsx'
+         ]
+      }
     ],
-    'prettier/prettier': [
+    'import/extensions': [
       'error',
-      { singleQuote: true, arrowParens: 'avoid', printWidth: 90 },
+      'ignorePackages',
+      {
+        'js': 'never',
+        'jsx': 'never',
+        'ts': 'never',
+        'tsx': 'never'
+      }
     ],
+    'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
     'react/jsx-one-expression-per-line': 'off',
     'react/no-unstable-nested-components': 'off',
     'react/no-unescaped-entities': 'off',
+    'react/jsx-no-duplicate-props': 'off',
+    'react/jsx-no-useless-fragment': 'off',
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'jsx-a11y/media-has-caption': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
     'global-require': 'off',
+    'space-defore-function-paren': 'off',
     'import/prefer-default-export': 'off',
+    'import/no-cycle': 'off',
+    'import/no-unresolved': 'error',
     'no-unused-vars': 'warn',
     'no-unused-expressions': 'off',
     'no-param-reassign': 'off',
     'no-underscore-dangle': 'off',
-    'class-methods-use-this': 'off',
     'no-console': 'off',
+    'no-alert': 'off',
+    'no-nested-ternary': 'off',
+    'no-plusplus': 'off',
+    'class-methods-use-this': 'off',
+    radix: 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': [
       'warn',
@@ -52,4 +79,9 @@ module.exports = {
       },
     ],
   },
+  settings: {
+    'import/resolver': {
+      'typescript': {}
+    }
+  }
 };
